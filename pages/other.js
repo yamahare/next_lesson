@@ -1,14 +1,12 @@
 import Link from 'next/link';
-import style from '../static/Style'
+import Layout from '../components/Layout'
 
 export default () => <div>
-    {style}
-    <h1>Next.js</h1>
-    <p>他のページです。</p>
-    <hr/>
-    <div>
-        <Link href="/">
-            <button>トップへ戻る</button>
-        </Link>
-    </div>
+    <Layout header="Other" title="他のページです。">
+        <div>
+            <Link href="/">
+                <button>トップへ戻る</button>
+            </Link>
+        </div>
+    </Layout>
 </div>
