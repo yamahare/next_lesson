@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-function Click(){
-    const [counter, setCounter] = useState(0);
+function Counter(){
+    const dispatch = useDispatch();
+    const counter = useSelector(state => state);
 
     return (
         <div>
-            <p>
-               count: {counter} 
-            </p>
-            <button onClick={() => setCounter(counter+1)}>カウントアップ</button>
+            <p>{counter.message}</p>
+            <p>{counter.count} </p>
+            <button onClick={() => dispatch({ type: "INCREMENT" })}>カウントアップ</button>
+            <button onClick={() => dispatch({ type: "DECREMENT" })}>カウントダウン</button>
+            <button onClick={() => dispatch({ type: "RESET" })}>RESET</button>
         </div>
     )
 }
 
-export default Click;
+export default Counter;
