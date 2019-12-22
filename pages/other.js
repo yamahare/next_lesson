@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Layout from '../components/Layout'
-import Counter from '../components/Counter'
+import Calc from '../components/Calc'
 
 export default () => <div>
     <Layout header="Other" title="他のページです。">
-        <Counter></Counter>
+        <Calc></Calc>
         <div>
             <Link href="/">
                 <button>トップへ戻る</button>
