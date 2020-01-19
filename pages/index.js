@@ -21,6 +21,10 @@ export default () => <div>
             <Link href="/fire_add">
                 <button>データ追加</button>
             </Link>
+            <br></br>
+            <Link href="/fire_del">
+                <button>データ削除</button>
+            </Link>
         </div>
     </Layout>
 </div>
