@@ -13,6 +13,14 @@ export default () => <div>
             <Link href="/other">
                 <button>他のページへ</button>
             </Link>
+            <br></br>
+            <Link href="/fire_find">
+                <button>データ検索</button>
+            </Link>
+            <br></br>
+            <Link href="/fire_add">
+                <button>データ追加</button>
+            </Link>
         </div>
     </Layout>
 </div>
