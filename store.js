@@ -15,20 +15,25 @@ const firebaseConfig = {
 
 var fireapp;
 try{
-    firebase.initializeApp(firebaseConfig);
+    fireapp = firebase.initializeApp(firebaseConfig);
 }catch(error){
     console.log(error.message);
 }
-export default fireapp;
+// export default fireapp;
 
 const initial = {
+    login: false,
+    username: '(click here!)',
+    email: '',
+    data: [],
+    items: []
 }
 
 //ダミー
 function fireReducer(state=initial, action){
     switch(action.type){
-        case 'TESTACTION':
-            return state;
+        case 'UPDATE_USER':
+            return action.value;
         default:
             return state;
     }

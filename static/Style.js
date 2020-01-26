@@ -57,4 +57,13 @@ export default <style jsx>{`
         margin: 0px;
         border-bottom: 1px solid gray;
     }
+    
+
+    .account{
+        cursor: pointer;
+        font-size: 12pt;
+        padding: 5px 10px;
+        color: gray;
+        border: 2px solid lightgray;
+    }
 `}</style>

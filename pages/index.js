@@ -25,6 +25,11 @@ export default () => <div>
             <Link href="/fire_del">
                 <button>データ削除</button>
             </Link>
+            <br></br>
+            <br></br>
+            <Link href="/address">
+                <button>アドレスアプリ</button>
+            </Link>
         </div>
     </Layout>
 </div>
