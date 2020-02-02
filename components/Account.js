@@ -10,9 +10,9 @@ function Account(props){
     const dispatch = useDispatch();
     const userStore = useSelector(state => state);
 
-    function login(){
+    async function login(){
         let provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider)
+        const result = await firebase.auth().signInWithPopup(provider)
             .then((result)=>{
                 dispatch({
                     type: 'UPDATE_USER',
@@ -25,8 +25,14 @@ function Account(props){
                     }
                 });
                 debugger
-                props.onLogined();
+                console.log(userStore.username)
+                console.log(userStore)
+                props.onLogined(userStore);
             })
+        console.log(result);
+        debugger
+        console.log('------------------')
+        console.log(userStore)
     }
 
     function logout(){
