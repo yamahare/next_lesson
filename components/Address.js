@@ -53,7 +53,7 @@ function Address(props){
                 let email = Lib.decodeEmail(j);
                 let s = data[i][j]['name'];
 
-                res.push(<li key={j} data-tag={email} onClick={go(null, email)}>
+                res.push(<li key={j} data-tag={email} onClick={()=>go(email)}>
                    {data[i][j]['check'] == true ?
                     <b>◎</b> : ''}{s}({email}) 
                 </li>);
@@ -64,7 +64,7 @@ function Address(props){
     }
 
     function go(email){
-        // Router.push('/address_show?email='+email)
+        Router.push('/address_show?email='+email)
     }
 
     async function login(){
@@ -141,10 +141,6 @@ function Address(props){
             <ul>
                 {userStore.items == [] ? <li key="0">no items.</li> : userStore.items}
             </ul>
-            <p>ああああ</p>
-            {userStore.login ? <p>yes</p> : <p>no</p>}
-            <p>{userStore.username}</p>
-            <p>{userStore.email}</p>
         </div>
     )
 
