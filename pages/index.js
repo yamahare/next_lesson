@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Image from '../static/Image'
 
 export default () => <div>
-    <Layout header="Next.js" title="ようこそNextjsです。＼(^o^)／">
+    <Layout header="Next.js" title="おもろトップ">
         {/* <Calc></Calc> */}
         <Sampledata></Sampledata>
         <Image fname="1.jpg" size="100"></Image>
